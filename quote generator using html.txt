@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <br>
+  
+ <title>RANDOM QUOTES <color #FFA07A>
+   
+ </color> </title>
+  <style>
+    body {
+      font-family: 'Times New Roman', sans-serif;
+      text-align: center;
+      margin: 100px;
+    }
+
+    #quote-container {
+      border: 1px solid #CD5C5C;
+      padding: 50px;
+      margin-bottom: 50px;
+    }
+
+    #new-quote-btn {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div id="quote-container">
+    <p id="quote-text">Click the button below to generate a random quote.</p>
+  </div>
+  <br> <br>
+  <button id="next-quote-btn" onclick="generateQuote()">Next Quote  </button>
+
+  <script>
+  
+    const quotes = [
+      "The only way to do great work is to love what you do. - Steve Jobs",
+      "In the middle of difficulty lies opportunity. - Albert Einstein",
+      "The future belongs to those who believe in the beauty of their dreams. - Eleanor Roosevelt",
+      "Don't watch the clock; do what it does. Keep going. - Sam Levenson",
+      "Success is not final, failure is not fatal: It is the courage to continue that counts. - Winston Churchill"
+    ];
+
+    function generateQuote() {
+     
+      const randomIndex = Math.floor(Math.random() * quotes.length);
+      const randomQuote = quotes[randomIndex];
+
+     
+      document.getElementById('quote-text').textContent = randomQuote;
+    }
+  </script>
+</body>
+</html>
